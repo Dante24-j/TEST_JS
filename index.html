@@ -7,16 +7,22 @@
 	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 </head>
 <body>
-	<script type="text/babel"> /* type="text/babel" указывает компилятору bable, что он должен перевести код в html */
+	<div id="container">
+
+	</div>
+
+	<script type="text/babel"> 
+	let destination = document.querySelector("#container");
+
+	/* type="text/babel" указывает компилятору bable, что он должен перевести код в html */
 		ReactDOM.render(
 			/* Метод render принимает два аргумента:
 			1. HTML-подобные элементы (JSX ), которые необходимо вывести.
 			2. Место в DOM, где React должна отобразить JSX. 
 			*/
 			<h1> Шерлок Холмс </h1>,
-			document.body
+			destination
 		);
-
 	</script>
 </body>
 </html>
